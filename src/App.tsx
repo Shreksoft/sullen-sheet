@@ -1,20 +1,20 @@
 import {useEffect, useState} from 'react'
 import './App.css'
-import {loadRaw} from "./loadRaw.ts";
-import {parseRaw} from "./parseRaw.ts";
+import {loadRawProxies} from "./loadRawProxies.ts";
+import {type ParsedProxy, parseRawProxies} from "./parseRawProxies.ts";
 import {ProxyList} from "./ProxyList.tsx";
 
 function App() {
-  const [proxyList, setProxyList] = useState<string[]>([]);
+  const [proxies, setProxies] = useState<ParsedProxy[]>([]);
 
   useEffect(() => {
-    loadRaw().then(parseRaw).then(setProxyList);
+    loadRawProxies().then(parseRawProxies).then(setProxies);
   }, [])
 
   return (
     <>
       <section id="proxyList">
-        <ProxyList list={proxyList} />
+        <ProxyList list={proxies} />
       </section>
     </>
   )
