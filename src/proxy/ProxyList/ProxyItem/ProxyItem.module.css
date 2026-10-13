@@ -1,0 +1,19 @@
+.item {
+  padding: 12px 8px;
+
+  &[data-visited="true"] {
+    background: #4b2020;
+  }
+}
+
+.link {
+  display: flex;
+  gap: 2px;
+  text-decoration: none;
+  color: whitesmoke;
+
+  & > span {
+    padding: 5px 5px;
+    background: var(--accent-bg);
+  }
+}

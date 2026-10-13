@@ -1,8 +1,8 @@
 import {useEffect, useState} from 'react'
 import './App.css'
-import {loadRawProxies} from "./loadRawProxies.ts";
-import {type ParsedProxy, parseRawProxies} from "./parseRawProxies.ts";
-import {ProxyList} from "./ProxyList.tsx";
+import {loadRawProxies} from "./proxy/loadRawProxies.ts";
+import {type ParsedProxy, parseRawProxies} from "./proxy/parseRawProxies.ts";
+import {ProxyList} from "./proxy/ProxyList/ProxyList.tsx";
 
 function App() {
   const [proxies, setProxies] = useState<ParsedProxy[]>([]);

@@ -1,0 +1,19 @@
+.buttonBox {
+  padding: 10px;
+  display: inline-flex;
+  gap: 2px;
+
+  & > button {
+    background: var(--accent-bg);
+    font: inherit;
+    padding: 5px;
+    min-width: 100px;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &[aria-pressed="true"] {
+      background: var(--accent);
+    }
+  }
+}
